@@ -1,0 +1,29 @@
+{
+  "name": "@vuejsde/vite-add-vue-router",
+  "version": "0.0.1",
+  "description": "Add vue-router to a create-vue based project",
+  "main": "index.js",
+  "author": "Antony Konstantinidis",
+  "type": "module",
+  "files": [
+    "index.js"
+  ],
+  "license": "MIT",
+  "bin": {
+    "vite-add-vue-router": "./index.js"
+  },
+  "keywords": [
+    "vite",
+    "vue3",
+    "typescript",
+    "ts",
+    "vue-router",
+    "scaffold",
+    "plugin",
+    "create-vue"
+  ],
+  "dependencies": {
+    "await-exec": "^0.1.2",
+    "prompts": "^2.4.2"
+  }
+}
