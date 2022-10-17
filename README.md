@@ -3,5 +3,5 @@ It helps installing the vue-router package in a create-vue based project.
 
 ## Installation
 ```bash
-$ npx @vuejsde/vite-add-vue-router
+$ npx vite-add-vue-router
 ```

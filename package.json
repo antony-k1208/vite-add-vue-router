@@ -1,5 +1,5 @@
 {
-  "name": "@vuejsde/vite-add-vue-router",
+  "name": "vite-add-vue-router",
   "version": "0.0.1",
   "description": "Add vue-router to a create-vue based project",
   "main": "index.js",
@@ -8,6 +8,12 @@
   "files": [
     "index.js"
   ],
+  "repository": {
+    "url": "https://github.com/antony-k1208/vite-add-vue-router"
+  },
+  "bugs": {
+    "url": "https://github.com/antony-k1208/vite-add-vue-router/issues"
+},
   "license": "MIT",
   "bin": {
     "vite-add-vue-router": "./index.js"
