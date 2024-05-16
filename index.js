@@ -7,7 +7,7 @@ import { mkdir, readFile, writeFile } from 'fs/promises';
 function generateRouterConfig() {
   return `
 import { createRouter, createWebHistory } from 'vue-router';
-import Home from '../views/Home.vue';
+import HomeView from '../views/HomeView.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -15,7 +15,7 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: Home,
+      component: HomeView,
     },
   ],
 });
@@ -42,7 +42,7 @@ async function generateVueFiles() {
 
   const oldAppVue = (await readFile('src/App.vue')).toString();
 
-  await writeFile('src/views/Home.vue', oldAppVue.replaceAll('./', '../'));
+  await writeFile('src/views/HomeView.vue', oldAppVue.replaceAll('./', '../'));
   await writeFile('src/App.vue', generateAppVue());
 }
 
@@ -63,7 +63,7 @@ async function generateMainFile(fileEnding) {
     vueConfigLines.length - 2
   ].replace('.mount(', '.use(router).mount(');
 
-  await writeFile('src/main.ts', vueConfigLines.join('\n'));
+  await writeFile(`src/main.${fileEnding}`, vueConfigLines.join('\n'));
 }
 
 async function init() {
